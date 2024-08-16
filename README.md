@@ -33,7 +33,15 @@ This project is part of the Factored 2024 Datathon, which focuses on analyzing g
 [Provide instructions on how to set up and run your project]
 
 ## Usage
-[Explain how to use your tool/application]
+
+- Create a virtual environment and install the required packages:
+
+```bash
+pyenv shell 3.12.3
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## Team Members
 - [Arnold Huete](https://www.linkedin.com/in/arnoldhuete/)
