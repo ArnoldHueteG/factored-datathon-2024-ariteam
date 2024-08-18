@@ -1,5 +1,8 @@
 jupyterlab
 pandas
 gdelt
-newspaper3k
+newspaper4k
 lxml[html_clean]
+typing_extensions
+dask[distributed,dataframe]
+pandas-gbq
