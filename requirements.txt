@@ -6,3 +6,4 @@ lxml[html_clean]
 typing_extensions
 dask[distributed,dataframe]
 pandas-gbq
+python-dotenv
