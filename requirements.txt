@@ -7,3 +7,4 @@ typing_extensions
 dask[distributed,dataframe]
 pandas-gbq
 python-dotenv
+langchain-community==0.2.12
