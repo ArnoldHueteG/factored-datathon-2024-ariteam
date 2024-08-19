@@ -1,0 +1,7 @@
+fastapi[standard]
+pydantic
+uvicorn[standard]
+gunicorn
+newspaper4k
+lxml[html_clean]
+typing_extensions
