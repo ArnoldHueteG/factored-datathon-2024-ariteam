@@ -53,9 +53,10 @@ def get_article(url):
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def scrape_articles_parallel(urls, max_workers=10):
-    results = []
+    results = [None] * len(urls)
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_url = {executor.submit(get_article, url): url for url in urls}
-        for future in as_completed(future_to_url):
-            results.append(future.result())
+        future_to_index = {executor.submit(get_article, url): i for i, url in enumerate(urls)}
+        for future in as_completed(future_to_index):
+            index = future_to_index[future]
+            results[index] = future.result()
     return results
