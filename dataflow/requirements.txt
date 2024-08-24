@@ -1,0 +1,10 @@
+ipykernel
+apache-beam[gcp,interactive,dataframe]==2.58.1
+google-cloud-dataflow-client
+google-cloud-storage
+google-cloud-secret-manager
+jupyterlab
+jupytext
+jupyter
+python-dotenv
+chardet
