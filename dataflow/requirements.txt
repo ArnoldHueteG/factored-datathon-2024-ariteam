@@ -3,6 +3,7 @@ apache-beam[gcp,interactive,dataframe]==2.58.1
 google-cloud-dataflow-client==0.8.12
 google-cloud-storage==2.18.2
 google-cloud-secret-manager==2.20.2
+google-cloud-bigquery==3.25.0
 jupyterlab
 jupytext
 jupyter
