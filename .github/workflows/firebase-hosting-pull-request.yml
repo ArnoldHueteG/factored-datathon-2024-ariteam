@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cd webpage;
       - name: Deploy to staging
         if: ${{ github.ref == 'refs/heads/previewChannel' }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entrypoint: ./webpage
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ARITEK_SOLUTIONS_DATATHON }}
           channelId: live
