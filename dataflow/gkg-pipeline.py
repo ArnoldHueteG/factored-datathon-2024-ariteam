@@ -111,7 +111,10 @@ def download_and_upload_gdelt_gkg(json_data):
 
 
 # %%
-files = dates | beam.Map(download_and_upload_gdelt_gkg)
+files = (dates 
+        | beam.Reshuffle()
+        | beam.Map(download_and_upload_gdelt_gkg)
+    )
 
 # %%
 p.run()
