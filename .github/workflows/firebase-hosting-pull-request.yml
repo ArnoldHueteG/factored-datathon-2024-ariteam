@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cd ./webpage
+      - run: cd webpage;
       - name: Deploy to staging
         if: ${{ github.ref == 'refs/heads/previewChannel' }}
         uses: FirebaseExtended/action-hosting-deploy@v0
