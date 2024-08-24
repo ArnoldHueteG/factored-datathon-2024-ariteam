@@ -24,12 +24,13 @@ jobs:
     needs: run-prebuildings
     runs-on: ubuntu-latest
     env:
-      PROJECT_ID: district-brands-production
+      PROJECT_ID: factored-hackaton-2024
       REGION: us-east1
       REF_NAME: ${{github.ref_name}}
-      STAGING_LOCATION: gs://dt-etls/dataflow/staging/
-      TEMP_LOCATION: gs://dt-etls/dataflow/temp/
-      SA_DF: dataflow-sa@district-brands-production.iam.gserviceaccount.com
+      STAGING_LOCATION: gs://factored-hackaton-2024/dataflow/staging/
+      TEMP_LOCATION: gs://factored-hackaton-2024/dataflow/temp/
+      TEMPLATE_LOCATION_1: gs://factored-hackaton-2024/dataflow/templates/gdelt_gkg_extract
+      SA_DF: github-cicd@factored-hackaton-2024.iam.gserviceaccount.com
       DATAFLOW_REPO: dataflow-prebuildings
     steps:
     - uses: actions/checkout@v3
@@ -52,3 +53,17 @@ jobs:
         python3 -m venv dataflow/.venv
         source dataflow/.venv/bin/activate && pip install --upgrade pip
         pip install -r dataflow/requirements.txt
+    - name: Create the template 
+      run: |-
+        source dataflow/.venv/bin/activate && cd dataflow
+        pwd0=$PWD 
+        python3 -m gkg-pipeline \
+              --runner DataflowRunner \
+              --project $PROJECT_ID \
+              --staging_location $STAGING_LOCATION \
+              --region $REGION \
+              --template_location "${TEMPLATE_LOCATION_1}_${REF_NAME}" \
+              --temp_location $TEMP_LOCATION \
+              --experiments=use_runner_v2 \
+              --sdk_container_image="${REGION}-docker.pkg.dev/${PROJECT_ID}/${DATAFLOW_REPO}/${REF_NAME}:latest" \
+              --sdk_location=container
