@@ -37,6 +37,9 @@ jobs:
 
     - name: Setup Python
       uses: actions/setup-python@v4 
+      with:
+        python-version: '3.12'
+        cache: 'pip' # caching pip dependencies
 
     - name: 'Authenticate with Cloud SDK'
       uses: 'google-github-actions/auth@v2'
