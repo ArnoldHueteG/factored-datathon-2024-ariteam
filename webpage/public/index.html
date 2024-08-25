@@ -35,11 +35,6 @@
 		<!-- Preloader -->
 		<div class="preloader"></div>
 		<!-- End Preloader -->
-
-		
-
-
-
 		<!-- Main Header -->
 		<header class="main-header main-header-one">
 
@@ -71,13 +66,15 @@
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
 
-										<li class=""><a href="#section1">Section 1</a></li>
+										<li class=""><a href="#overview">Overview</a></li>
 
-										<li><a href="#section2">Section 2</a></li>
+										<li class=""><a href="#architecture">Architecture</a></li>
 
-										<li class=""><a href="#section3">Section 3</a></li>
+										<li class=""><a href="graph">Knowdledge Graph</a></li>
 
-										<li class=""><a href="#section4">Section 4</a></li>
+										<li class=""><a href="#dashboard">Dashboard</a></li>
+
+										<li class=""><a href="#resources">Resources</a></li>
 
 
 									</ul>
@@ -126,14 +123,13 @@
 
 
 		<!-- Feature One Start -->
-		<section class="feature-one" >
+		<section class="feature-one" id="overview" >
 			<div class="container">
 				<div class="feature-one__inner">
-					<h2 class="feature-one__title">Welcome to Ariteam <br>
-						<span> Factored Team  </span><br>
-					<p style="font-weight: 200; font-size: 1rem; text-align: left; margin-top: 15px; line-height: normal;" > Lorem ipsum dolor sit amet 
-						consectetur, adipisicing elit. Labore repudiandae dolores voluptatum dicta fugiat, omnis voluptatibus 
-						dignissimos, fugit at sint laboriosam numquam tempora deserunt sit maxime temporibus suscipit quasi dolorum!</p>
+					<h2 class="feature-one__title">Welcome to <span> AriTeam  </span> <br>
+						<span> Factored's Datathon 2024  </span><br>
+					<p style="font-weight: 200; font-size: 1rem; text-align: left; margin-top: 15px; line-height: normal;" > The 2024 Factored Datathon was an exhilarating event that brought together 352 participants from around the world. Our mission was to extract crucial insights from global events, enabling early intervention and strategic planning to help businesses and organizations navigate complex and volatile environments. We delved deeply into the extensive and dynamic dataset provided by the Global Database of Events, Language, and Tone (GDELT).
+						</p>
 				</div>
 				<div style="display: flex; justify-content: center; gap:50px; align-items: center; flex-wrap: wrap;">
 					<div>
@@ -150,11 +146,11 @@
 	
 							 <div class="d-flex" style="justify-content: center; margin-top:20px; width: 50%;">
 								<a href="https://www.linkedin.com/in/oscar-perez-raggio-a5ab32100/" target="_blank" style="color: beige;"> <li style="font-weight: 700;"> Óscar Perez </li>
-									  <p style="font-size: .8rem;">Machine Engineer</p> </a>
+									  <p style="font-size: .8rem;">Data Scientist</p> </a>
 							 </div>
 	
 							 <div class="d-flex" style="justify-content: center; margin-top:20px; width: 50%;">
-								<a href="/" style="color: beige; " target="_blank"> <li style="font-weight: 700;"> Diego Rojas </li>
+								<a href="https://www.linkedin.com/in/diegorojasvera/" style="color: beige; " target="_blank"> <li style="font-weight: 700;"> Diego Rojas </li>
 									  <p style="font-size: .8rem;">NLP Engineer</p> </a>
 							 </div>
 							 
@@ -355,11 +351,11 @@
 
 
 		<!-- Solutions Two Start -->
-		<section class="solutions-two" style="margin-top: 80px;">
+		<section class="solutions-two" style="margin-top: 80px;" id="architecture">
 			<div class="container">
 				<div class="section-title text-center">
 					
-					<h2 class="section-title__title" > Datathon <span> project</span></h2>
+					<h2 class="section-title__title" > Project <span> Architecture </span></h2>
 				</div>
 				<div class="solutions-two__content-one wow fadeInUp" data-wow-delay="100ms" >
 					<div class="solutions-two__shape-1"></div>
@@ -370,12 +366,11 @@
 									<img src="images/shapes/solutions-two-shape-2.png" alt="">
 								</div>
 								<div class="solutions-two__content-one-title-box" >
-									<p>Project Architecture</p>
 									<h3> 
-										Explore our cutting-edge data pipeline architecture, designed for efficient data processing and analysis:
+										Leveraging Google Cloud and Open Source Technologies to Deliver a Powerful Data Solution
 									</h3>
 								</div>
-								<p class="solutions-two__content-one-text-1">Here is a more professional description, detailing in a general way how the problem is approached and solved.</p>
+								<!-- <p class="solutions-two__content-one-text-1">Here is a more professional description, detailing in a general way how the problem is approached and solved.</p> -->
 								<ul class="solutions-two__content-one-points">
 									<li>
 										<div class="icon">
@@ -383,7 +378,7 @@
 										</div>
 										<div class="text">
 											<p>
-												<span>Key Components:</span> Neo4j database, Cloud Run, Dataflow, and more		
+												<span>Version Control and Continuous Integration/Continuous Deployment (CI/CD) with GitHub Actions</span>
 											</p> </div>
 									</li>
 									<li>
@@ -391,7 +386,7 @@
 											<i class="fal fa-check"></i>
 										</div>
 										<div class="text">
-											<p> <span>Data Flow:</span>  From web sources through processing to visualization</p>
+											<p> <span>Container Orchestration using Docker with Artifact Registry for image management</span></p>
 										</div>
 									</li>
 									<li>
@@ -399,7 +394,7 @@
 											<i class="fal fa-check"></i>
 										</div>
 										<div class="text">
-											<p> <span>API Integration:</span> Seamless connection with external data sources</p>
+											<p> <span>Data Processing and Analytics: ETL Pipelines with Dataflow, advanced analytics using BigQuery</span></p>
 										</div>
 									</li>
 									<li>
@@ -407,14 +402,30 @@
 											<i class="fal fa-check"></i>
 										</div>
 										<div class="text">
-											<p> <span>Visualization:</span> Powered by Streamlit and Looker for insightful analytics</p>
+											<p> <span>Knowledge Graph Implementation: Neo4j database powering core application logic</span></p>
+										</div>
+									</li>
+									<li>
+										<div class="icon">
+											<i class="fal fa-check"></i>
+										</div>
+										<div class="text">
+											<p> <span>Data Visualization and Insights: Interactive dashboards with Streamlit, business intelligence reporting via Looker</span> </p>
+										</div>
+									</li>
+									<li>
+										<div class="icon">
+											<i class="fal fa-check"></i>
+										</div>
+										<div class="text">
+											<p> <span>Web Hosting and Deployment: Firebase Hosting for efficient and scalable web application serving</span> </p>
 										</div>
 									</li>
 								</ul>
 								<p>Click to dive deeper into each component and understand how they work together to deliver powerful data solutions.</p>
 								<div class="solutions-two__content-one-btn-box mt-3">
 									<a href="https://github.com/ArnoldHueteG/factored-datathon-2024-ariteam/tree/main" target="_blank" class="thm-btn solutions-two__content-one-btn"> <i
-											class="fal fa-plus"></i> More information</a>
+											class="fal fa-plus"></i> Read More </a>
 								</div>
 							</div>
 						</div>
@@ -423,7 +434,7 @@
 								<div class="solutions-two__content-one-img-box">
 									<div class="solutions-two__content-one-img">
 
-										<img src="images/projects/WhatsApp Image 2024-08-25 at 10.55.57 AM.jpeg" alt="">
+										<img src="images/resource/architecture.png" alt="">
 									</div>
 								</div>
 							</div>
