@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "aritek-solutions-datathon-2",
+    "site": "aritek-solutions-datathon",
     "public": "public/",
     "ignore": [
       "firebase.json",
