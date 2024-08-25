@@ -3,7 +3,7 @@ name: Daily GDELT GKG Extract
 on:
   schedule:
     - cron: '15 0 * * *'  # Runs at 12:15 AM UTC every day
-
+  workflow_dispatch:
 jobs:
   run-dataflow-job:
     runs-on: ubuntu-latest
