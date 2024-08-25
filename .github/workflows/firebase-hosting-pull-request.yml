@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: cd webpage
       - name: Deploy to production
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: FirebaseExtended/action-hosting-deploy@v0
