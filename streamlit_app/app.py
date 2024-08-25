@@ -17,8 +17,6 @@ if 'date_saved' not in st.session_state:
     st.session_state['date_saved'] = st.session_state['list_news'][0]["Fecha"]
 
 # Function to build nodes and edges based on the hierarchy
-# Function to build nodes and edges based on the hierarchy
-# Function to build nodes and edges based on the hierarchy
 def build_graph(data, selected_date, selected_topic):
     nodes = []
     edges = []
@@ -241,60 +239,7 @@ if selected_date:
 
         st.session_state['list_topics'] = list(topics)
 
-        # Creating a dictionary to map the topics to their respective meanings
-        topic_mapping = {'IDEOLOGY': 'ideologia',
-        'CRISISLEX_CRISISLEXREC': 'use of social media for crisis and disaster response',
-        'EPU_POLICY_GOVERNMENT': 'epu policy goverment',
-        'ARMEDCONFLICT': 'conflicto armado',
-        'TRANSPARENCY': 'transparencia',
-        'SCANDAL': 'escandalo',
-        'ECON_STOCKMARKET': 'stock market',
-        'EPU_POLICY': 'incertidumbre economica',
-        'WB_1235_CENTRAL_BANKS': 'banco mundial',
-        'UNEMPLOYMENT': 'desempleo',
-        'ECON_INFLATION': 'inflacion economica',
-        'ECON_BANKRUPTCY': 'quiebra economica',
-        'WB_1104_MACROECONOMIC_VULNERABILITY_AND_DEBT': 'macroeconomia deuda y vulnerabilidad',
-        'WB_2745_JOB_QUALITY_AND_LABOR_MARKET_PERFORMANCE': 'job quality & labor market performance',
-        'POVERTY': 'pobreza',
-        'ECON_DEBT': 'deuda publica',
-        'WB_471_ECONOMIC_GROWTH': 'crecimiento economico',
-        'WB_318_FINANCIAL_ARCHITECTURE_AND_BANKING': 'finanzas y bancos',
-        'ECON_OILPRICE': 'precio petroleo',
-        'WB_625_HEALTH_ECONOMICS_AND_FINANCE': 'prosperidad economica y finanzas',
-        'ECON_FREETRADE': 'libre comercio',
-        'POLITICAL_TURMOIL': 'inestabilidad politica',
-        'REBELLION': 'rebelion',
-        'TRIAL': 'juicio',
-        'TERROR': 'terrorismo',
-        'MILITARY': 'ejercito',
-        'CORRUPTION': 'corrupcion',
-        'PROTEST': 'protestas',
-        'EXTREMISM': 'extremismo',
-        'REFUGEES': 'refugiados',
-        'SURVEILLANCE': 'vigilancia',
-        'WB_2024_ANTI_CORRUPTION_AUTHORITIES': 'autoridades anticorrupcion',
-        'EPU_CATS_NATIONAL_SECURITY': 'seguridad nacional',
-        'democracy': 'democracia',
-        'WB_2019_ANTI_CORRUPTION_LEGISLATION': 'legislacion anticorrupcion',
-        'WB_739_POLITICAL_VIOLENCE_AND_CIVIL_WAR': 'violencia politica y guerra civil',
-        'WB_2443_RAPE_AND_SEXUAL_VIOLENCE': 'agresion sexual',
-        'IMMIGRATION': 'inmigracion',
-        'SCIENCE': 'ciencia',
-        'EDUCATION': 'educacion',
-        'ENV_CLIMATECHANGE': 'cambio climatico',
-        'ECON_ENTREPRENEURSHIP': 'emprendimiento',
-        'WB_2165_HEALTH_EMERGENCIES': 'emergencia sanitaria',
-        'ECON_HOUSING_PRICES': 'precio vivienda',
-        'WB_2167_PANDEMICS': 'pandemia',
-        'WB_525_RENEWABLE_ENERG': 'energias renovables',
-        'ECON_SUBSIDIES': 'subsidios',
-        'DISCRIMINATION_RACE_RACISM': 'racismo',
-        'HEALTH_VACCINATION': 'vacunas',
-        'MEDIA_CENSORSHIP': 'censura en medios',
-        'TAX_DISEASE': 'enfermedades muy infecciosas',
-        'TAX_DISEASE_CORONAVIRUS_INFECTIONS': 'numero de contagios covid',
-        'TAX_DISEASE_CORONAVIRUS': 'fallecimiento por covid'}
+        
 
         #topic_list_filter = [topic_mapping.get(t) for t in topics_list if t in topic_mapping]
         #select_keys ={}
