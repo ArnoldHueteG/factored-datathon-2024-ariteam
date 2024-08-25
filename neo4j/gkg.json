@@ -1,0 +1,56 @@
+{
+  "config": {
+    "reset_db": true,
+    "index_all_properties": false
+  },
+  "sources": [
+    {
+      "type": "bigquery",
+      "name": "content_table",
+      "query": "select id, content, first_sourceurl, ml_generate_embedding_result, ml_generate_embedding_status, DATE, NUMARTS, COUNTS, THEMES, LOCATIONS, PERSONS, ORGANIZATIONS, TONE, CAMEOEVENTIDS, SOURCES, SOURCEURLS from `factored-hackaton-2024`.gdelt.gkg_with_embeddings_and_original_columns LIMIT 500"
+    }
+  ],
+  "targets": [
+    {
+      "node": {
+        "source": "content_table",
+        "name": "gkgNews",
+        "mode": "append",
+        "transform": {
+          "group": true
+        },
+        "mappings": {
+          "labels": [
+            "\"Content\""
+          ],
+          "properties": {
+            "keys": [
+              {"id": "content_id"}
+            ],
+            "strings": [
+              {"content": "content"},
+              {"first_sourceurl": "source_url"},
+              {"ml_generate_embedding_status": "embedding_status"},
+              {"DATE": "date"},
+              {"THEMES": "themes"},
+              {"LOCATIONS": "locations"},
+              {"PERSONS": "persons"},
+              {"ORGANIZATIONS": "organizations"},
+              {"SOURCES": "sources"},
+              {"SOURCEURLS": "source_urls"},
+              {"title": "title"},
+              {"COUNTS": "counts"},
+              {"TONE": "tone"},
+              {"CAMEOEVENTIDS": "cameo_event_ids"}
+            ],
+            "unique": [],
+            "floats": [],
+            "integers": [
+              {"NUMARTS": "num_articles"}
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
