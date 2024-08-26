@@ -3,7 +3,7 @@
 ## Event Details
 - **Date**: August 12th - August 25th, 2024
 - **Last Submission Deadline**: August 25th, 2024, 23:30 EST
-- **Closing Event & Winners Announcement**: September 6th, 2024
+- **Closing Event & Winners Announcement**: September 6th, 2024.
 
 ## Challenge Overview
 This project is part of the Factored 2024 Datathon, which focuses on analyzing global events using the GDELT (Global Database of Events, Language, and Tone) dataset. The main objectives are:
