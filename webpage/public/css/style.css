@@ -255,3 +255,13 @@ a li:hover{
   animation: estroboscopico1 0.8s infinite;
   animation-delay: 3s;
 }
+
+/*CSS MODIFIED */
+
+.transparent-cursor {
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAwAB/ilT9gAAAABJRU5ErkJggg=='), auto;
+}
+
+a:hover {
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAwAB/ilT9gAAAABJRU5ErkJggg=='), auto;
+}

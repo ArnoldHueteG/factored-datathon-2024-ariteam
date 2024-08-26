@@ -26,15 +26,19 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
 </head>
 
-<body class="body-bg-color">
+<body class="body-bg-color transparent-cursor ">
 
 	<div class="page-wrapper">
 
 		<!-- Preloader -->
 		<div class="preloader"></div>
 		<!-- End Preloader -->
+		<div class="cursor"></div>
+		<div class="cursor-follower"></div>
 		<!-- Main Header -->
 		<header class="main-header main-header-one">
 
@@ -131,7 +135,7 @@
 					<p style="font-weight: 200; font-size: 1rem; text-align: left; margin-top: 15px; line-height: normal;" > The 2024 Factored Datathon was an exhilarating event that brought together 352 participants from around the world. Our mission was to extract crucial insights from global events, enabling early intervention and strategic planning to help businesses and organizations navigate complex and volatile environments. We delved deeply into the extensive and dynamic dataset provided by the Global Database of Events, Language, and Tone (GDELT).
 						</p>
 				</div>
-				<div style="display: flex; justify-content: center; gap:50px; align-items: center; flex-wrap: wrap;">
+				<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
 					<div>
 						<h3 class="feature-one__title" style=" margin-bottom: 15px;">Team's members</h3>
 						<ul style="text-align: center;">
@@ -338,6 +342,50 @@
 							</div>
 							</div>
 					</div>
+
+
+					<div>
+						<div class="animated fadeInLeft">
+							<div class="pricing-one__single">
+								<div class="pricing-one__overly-color"></div>
+								<p class="pricing-one__tagline">Datasetss</p>
+								
+								
+								<ul class="list-unstyled pricing-one__points">
+									<li>
+										<div class="circle-box"></div>
+										<div class="text" style="display: flex; align-items: center; gap:10px">
+											<p>GDELT 1.0 GKG Data </p>
+											<a href="http://data.gdeltproject.org/gkg/index.html" target="_blank"> 
+											<i class="bi bi-database-fill" style="font-size:30px;"></i>
+											</a>
+
+											<a target="_blank" href="http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook.pdf">
+												<i class="bi bi-file-earmark-medical-fill" style="font-size:30px"></i>
+											</a>
+											
+
+										</div>
+									</li>
+									<li>
+										<div class="circle-box"></div>
+										<div class="text" style="display: flex; align-items: center; gap:10px">
+											<p>GDELT 1.0 Events Data </p>
+											<a href="http://data.gdeltproject.org/events/index.html" target="_blank">
+
+												<i class="bi bi-database-fill" style="font-size:30px;"></i>
+											</a>
+
+											<a href="http://data.gdeltproject.org/documentation/GDELT-Data_Format_Codebook.pdf" target="_blank">
+												<i class="bi bi-file-earmark-medical-fill" style="font-size:30px"></i>
+
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
@@ -445,7 +493,8 @@
 					<div class="row">
 						<!--Solutions Two Single Start-->
 						<div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
-							<div class="solutions-two__content-two-single">
+							<a href="https://lookerstudio.google.com/embed/u/0/reporting/cf8f1b44-bb49-4ed8-98d1-8d820c3e38da/page/Miq9D" target="_blank">
+								<div class="solutions-two__content-two-single">
 								<div class="solutions-two__content-two-top">
 									<div class="solutions-two__content-two-title-box">
 										<!-- <p>Title project</p> -->
@@ -465,30 +514,33 @@
 									</div>
 								</div>
 							</div>
+						</a>
 						</div>
 						<!--Solutions Two Single End-->
 						<!--Solutions Two Single Start-->
 						<div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
-							<div class="solutions-two__content-two-single">
-								<div class="solutions-two__content-two-top">
-									<div class="solutions-two__content-two-title-box">
-										<!-- <p>Title project</p> -->
-										<h3>Interactive Graph Analysis in Streamlit</h3>
+							<a href="">
+								<div class="solutions-two__content-two-single">
+									<div class="solutions-two__content-two-top">
+										<div class="solutions-two__content-two-title-box">
+											<!-- <p>Title project</p> -->
+											<h3>Interactive Graph Analysis in Streamlit</h3>
+										</div>
+										<!-- <p class="solutions-two__content-two-text-1">Here is a more professional description, 
+											detailing in a general way how the problem is approached and solved.</p> -->
+										<div class="solutions-two__content-two-btn">
+										</div>
 									</div>
-									<!-- <p class="solutions-two__content-two-text-1">Here is a more professional description, 
-										detailing in a general way how the problem is approached and solved.</p> -->
-									<div class="solutions-two__content-two-btn">
+									<div class="solutions-two__content-two-img-box">
+										<div class="solutions-two__content-two-shape-1">
+											<img src="images/shapes/solutions-two-content-two-shape-1.png" alt="">
+										</div>
+										<div class="solutions-two__content-two-img">
+											<img src="images/resource/graph-dashboard.jpeg" alt="">
+										</div>
 									</div>
 								</div>
-								<div class="solutions-two__content-two-img-box">
-									<div class="solutions-two__content-two-shape-1">
-										<img src="images/shapes/solutions-two-content-two-shape-1.png" alt="">
-									</div>
-									<div class="solutions-two__content-two-img">
-										<img src="images/resource/graph-dashboard.jpeg" alt="">
-									</div>
-								</div>
-							</div>
+							</a>
 						</div>
 						<!--Solutions Two Single End-->
 					</div>
