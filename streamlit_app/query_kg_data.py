@@ -43,7 +43,7 @@ def query_kg(date: str = '13-08-2024'):
             'INVOLVES_ORGANIZATION' AS RelacionOrganizacion
         LIMIT 500
         """
-    conn = Neo4jConnection(uri="neo4j+s://614dfd28.databases.neo4j.io", user="neo4j" , pwd="iSqda4HLJiAZo1TgAyRH0SrvYyj9Nd3olNj6PvZ33sE")
+    conn = Neo4jConnection(uri="password", user="neo4j" , pwd="password")
     results = conn.query(query)
     data =[]
     
